@@ -17,12 +17,10 @@ function convertToRoman(num) {
     };
 
     let result = '';
-
-    // Loop through the object and subtract the values from num
     for (let index = 0; num > 0; index++) {
         const [symbol, value] = obj[index];
 
-        // While the number is larger or equal to the current value, append the symbol
+        
         while (num >= value) {
             result += symbol;
             num -= value;
@@ -32,6 +30,5 @@ function convertToRoman(num) {
     return result;
 }
 
-// Example usage
 console.log(convertToRoman(14));  // Output: XIV
 console.log(convertToRoman(798)); // Output: DCCXCVIII
